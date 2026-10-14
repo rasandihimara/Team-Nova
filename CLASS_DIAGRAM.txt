@@ -1,0 +1,47 @@
+SIMPLE CLASS DIAGRAM
+
+                 <<abstract>>
+                    User
+             -------------------
+             - username
+             - password
+             -------------------
+             + checkPassword()
+             + getRole() = 0
+                    / \
+                   /   \
+                  /     \
+             Cashier     Manager
+
+Product
+-----------------------------
+- id
+- name
+- category
+- price
+- stock
+- reorderLevel
+-----------------------------
++ get...()
++ set...()
++ isLowStock()
+
+BakerySystem
+-----------------------------
+- products
+- currentSale
+- orderNumber
+- totalSales
+-----------------------------
++ addProduct()
++ updateProduct()
++ deleteProduct()
++ addSaleLine()
++ completeSale()
++ getLowStockCount()
+
+AppForm : Form
+    |
+    +---- DashboardForm
+    +---- SalesForm
+    +---- InventoryForm

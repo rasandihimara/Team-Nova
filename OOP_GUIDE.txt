@@ -1,0 +1,35 @@
+HOW THE 6 OOP CONCEPTS ARE SHOWN
+
+1. CLASS
+Product, User, Cashier, Manager and BakerySystem are classes.
+
+2. OBJECT
+Examples:
+- BakerySystem system; in main.cpp
+- new Cashier("cashier", "1234") in LoginForm
+- Product p(...) in InventoryForm
+
+3. ENCAPSULATION
+Product's id, name, category, price, stock and reorderLevel are private.
+The program uses get/set methods to access or change them.
+
+4. ABSTRACTION
+User is an abstract class because getRole() is pure virtual:
+virtual std::string getRole() const = 0;
+
+5. INHERITANCE
+Cashier : public User
+Manager : public User
+
+6. POLYMORPHISM
+Login creates either a Cashier or Manager and stores it in a User* pointer.
+Calling user->getRole() uses the overridden function of the actual object.
+
+WHY THIS IS FIRST-YEAR FRIENDLY
+- Database operations are handled through ODBC in the form layer; the model classes retain their OOP roles
+- No advanced design patterns
+- No advanced design patterns
+- Small number of classes
+- Simple vectors and structs
+- GUI is written directly in C++/CLI without the Visual Studio designer
+- Each class has a clear purpose

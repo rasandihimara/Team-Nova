@@ -1,0 +1,11 @@
+#include "../include/Forms.h"
+
+[STAThreadAttribute]
+int main(array<System::String^>^ args)
+{
+    BakerySystem system;
+    Application::EnableVisualStyles();
+    Application::SetCompatibleTextRenderingDefault(false);
+    Application::Run(gcnew LoginForm(&system));
+    return 0;
+}
